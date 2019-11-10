@@ -15,51 +15,29 @@ class App extends React.Component {
     var ctx = canvas.getContext("2d");
     var img = new Image();
 
-    function draw(imgURL) {
+    function draw() {
       img.crossOrigin = "anonymous";
-      img.src = imgURL;
-      img.onload = () => {
-        canvas.height = img.height / 4;
-        canvas.width = img.width / 4;
-
-        pixelate();
-      };
+      img.src = imgSrc;
+      img.onload = () => pixelate();
     }
 
-    //
     function pixelate() {
       canvas.height = img.height;
       canvas.width = img.width;
 
-      const area = img.height * img.width;
+      var widthSize = 4 / img.width;
+      var heightSize = 4 / img.height;
 
-      var size = 0.007;
-
-      if (area > 12000000) {
-        size = 0.001;
-      } else if (area > 7000000) {
-        size = 0.0015;
-      } else if (area > 5000000) {
-        size = 0.002;
-      } else if (area > 1500000) {
-        size = 0.00225;
-      } else if (area > 900000) {
-        size = 0.0025;
-      } else if (area > 350000) {
-        size = 0.004;
-      }
-
-      var w = canvas.width * size;
-      var h = canvas.height * size;
+      var w = canvas.width * widthSize;
+      var h = canvas.height * heightSize;
 
       ctx.drawImage(img, 0, 0, w, h);
 
       ctx.mozImageSmoothingEnabled = false;
       ctx.imageSmoothingEnabled = false;
-
       ctx.drawImage(canvas, 0, 0, w, h, 0, 0, canvas.width, canvas.height);
     }
-    draw(imgSrc);
+    draw();
   };
 
   render() {
