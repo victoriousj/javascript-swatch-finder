@@ -31,4 +31,5 @@ button {
 canvas {
   image-rendering: pixelated;
   margin: 0 auto;
+  max-width: 500px;
 }
