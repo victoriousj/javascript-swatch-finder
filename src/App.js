@@ -79,11 +79,21 @@ const App = () => {
     draw();
   };
 
+  const resetImg = () => {
+    setImage("");
+    setColors([]);
+  };
+
   const imageEl =
     image === "" ? (
       <span>select an image</span>
     ) : (
-      <img className="image-file" src={image} alt="select file" />
+      <img
+        className="image-file"
+        src={image}
+        alt="select file"
+        onClick={resetImg}
+      />
     );
 
   return (

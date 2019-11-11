@@ -135,7 +135,8 @@ canvas {
   height: 80px;
   justify-content: center;
   text-emphasis: bold;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 2px black;
   width: 80px;
   font-size: 1.25rem;
   margin: 5px;
@@ -155,6 +156,18 @@ canvas {
 }
 
 @media (max-width: 800px) {
+  html {
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ff0000;
+  }
+
   header {
     justify-content: space-between;
   }
