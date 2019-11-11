@@ -1,27 +1,73 @@
 * {
   box-sizing: border-box;
 }
+
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Open Sans", "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-color: #121314;
   color: white;
   height: 100vh;
   overflow: hidden;
   text-align: center;
   width: 100vw;
+  margin: 0;
 }
-.container {
-  align-content: space-around;
-  background-color: #1a1b1c;
-  border: 2px solid white;
-  border-radius: 5px;
+
+header {
+  padding: 5px 5px 10px;
   display: flex;
-  height: 88vh;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  background-color: #1a1b1c;
+  text-align: left;
+}
+
+.title {
+  font-size: 1.75rem;
+}
+
+.credit {
+  font-size: 0.7rem;
+  color: silver;
+  text-decoration: none;
+}
+
+.credit:hover {
+  color: whitesmoke;
+}
+
+.header-text {
+  margin: 0 10px;
+}
+
+.header-text p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.logo {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.container {
+  background-color: #1a1b1c;
+  border-radius: 5px;
+  height: 85vh;
   display: flex;
   margin: 1% auto;
-  padding: 10px;
-  width: 99vw;
+  padding: 20px;
+  width: 97vw;
 }
+
 .photo-container {
   background-color: #333;
   height: 100%;
@@ -36,22 +82,11 @@ body {
   border: 2px dashed white;
 }
 
-.results {
-  background-color: #444;
-  height: 100%;
-  padding: 50px;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-img {
+.image-file {
   height: auto;
   max-height: 100%;
   max-width: 100%;
-  border-radius: 5px;
-  box-sizing: border-box;
+  border-radius: 8px;
   border: 2px dashed #555;
   padding: 2px;
 }
@@ -71,9 +106,26 @@ img {
 .border {
   border: 2px dashed #555;
 }
+
+input[type="file"] {
+  display: none;
+}
+
+.results {
+  background-color: #444;
+  height: 100%;
+  padding: 50px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
 canvas {
   display: none;
 }
+
 .color-block {
   align-items: center;
   border-radius: 50%;
@@ -100,15 +152,4 @@ canvas {
   justify-content: center;
   align-content: center;
   align-items: center;
-}
-
-input[type="file"] {
-  display: none;
-}
-
-h1 {
-  padding: 20px 0 0;
-  margin: 0;
-  font-weight: lighter;
-  font-size: 2rem;
 }

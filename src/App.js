@@ -1,54 +1,58 @@
 import React from "react";
+import Color from "./Color";
+import Header from "./Header";
+
 import "./App.css";
 
-import Color from "./Color";
-
-import { fullColorHex, compareColors } from "./helpers";
+import { fullColorHex, weighColors } from "./helpers";
 
 const App = () => {
-  const [uImage, setUImage] = React.useState("");
+  const handleFormClick = () => inputRef.current.click();
   const [colors, setColors] = React.useState([]);
+  const [image, setImage] = React.useState("");
   const canvasRef = React.createRef();
   const inputRef = React.createRef();
-
-  const handleFormClick = () => {
-    inputRef.current.click();
-  };
 
   const onChange = e => {
     if (!e.target.files.length) return;
 
-    setColors([]);
-    var imgSrc = URL.createObjectURL(e.target.files[0]);
-    setUImage(imgSrc);
-    var canvas = canvasRef.current;
-    var ctx = canvas.getContext("2d");
-    var img = new Image();
+    const imgSrc = URL.createObjectURL(e.target.files[0]);
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    const img = new Image();
+    setImage(imgSrc);
 
     function draw() {
+      img.onload = () => pixelate();
       img.crossOrigin = "anonymous";
       img.src = imgSrc;
-      img.onload = () => pixelate();
     }
 
     function pixelate() {
-      var size = 4;
+      // The unit used to determine the dimensions
+      // of the pixel grid we will create.
+      // Higher value means more colors will be found.
+      const size = 8;
 
-      var height = (canvas.height = img.height);
-      var width = (canvas.width = img.width);
+      const height = (canvas.height = img.height);
+      const width = (canvas.width = img.width);
+      const h = (height * size) / height;
+      const w = (width * size) / width;
+      const colorArr = [];
 
-      var widthSize = size / width;
-      var heightSize = size / height;
-
-      var w = width * widthSize;
-      var h = height * heightSize;
-
+      // Draw the image scaled down to a pixel grid the
+      // size of the 'size' variable (e.g., 8 x 8)
       ctx.drawImage(img, 0, 0, w, h);
-      ctx.mozImageSmoothingEnabled = false;
+      // Turn off smoothing so, when upscaled, the image
+      // will have hard edges
       ctx.imageSmoothingEnabled = false;
+      ctx.mozImageSmoothingEnabled = false;
+      // Now scale up that small image and the details of
+      // most pixels will have been lost, leaving a grid
+      // of the most prominent colors in each section.
       ctx.drawImage(canvas, 0, 0, w, h, 0, 0, width, height);
 
-      let colorArr = [];
+      // Get the color of the center of each square in our grid.
       for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
           var c = ctx.getImageData(
@@ -58,65 +62,47 @@ const App = () => {
             1
           ).data;
 
-          var color = {
+          let color = {
             r: c[0],
             g: c[1],
             b: c[2],
+            weight: 1,
             hex: fullColorHex(c[0], c[1], c[2])
           };
 
           colorArr.push(color);
         }
       }
-
-      compareColors(colorArr);
-
-      setColors(
-        colorArr.map(x => (
-          <Color
-            key={`${x.r}${x.g}${x.b}`}
-            r={x.r}
-            g={x.g}
-            b={x.b}
-            hex={x.hex}
-          />
-        ))
-      );
+      weighColors(colorArr);
+      setColors(colorArr.map(x => <Color {...x} key={x.r + x.g + x.b} />));
     }
     draw();
   };
 
-  const image =
-    uImage === "" ? (
-      <span>click to select an image</span>
+  const imageEl =
+    image === "" ? (
+      <span>select an image</span>
     ) : (
-      <img className="image-file" src={uImage} alt="click to select a file" />
+      <img className="image-file" src={image} alt="select file" />
     );
 
   return (
     <div>
-      <header>
-        <h1>Swatch Finder</h1> <span>by victor d. johnson</span>
-      </header>
+      <Header />
       <div className="container">
         <div className="photo-container">
           <div
-            className={`photo ${uImage === "" ? "border" : ""}`}
+            className={`photo ${image === "" ? "border" : ""}`}
             onClick={handleFormClick}
           >
-            {image}
+            {imageEl}
           </div>
         </div>
         <div className="results">
           <div className="color-swatch">{colors}</div>
         </div>
         <canvas ref={canvasRef}></canvas>
-        <input
-          ref={inputRef}
-          type="file"
-          name="file-input"
-          onChange={onChange}
-        />
+        <input ref={inputRef} type="file" onChange={onChange} />
       </div>
     </div>
   );

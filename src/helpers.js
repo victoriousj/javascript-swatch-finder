@@ -1,15 +1,14 @@
-export const compareColors = colorArr => {
+export const weighColors = colorArr => {
   for (let i = 0; i < colorArr.length; i++) {
     let color = colorArr[i];
     for (let j = i + 1; j < colorArr.length; j++) {
       let color2 = colorArr[j];
       if (colorDelta(color.hex, color2.hex) > 0.9) {
+        color.weight += color2.weight;
         colorArr.splice(j--, 1);
       }
     }
   }
-
-  return colorArr;
 };
 
 export const colorDelta = (hex1, hex2) => {
