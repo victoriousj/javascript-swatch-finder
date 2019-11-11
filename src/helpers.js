@@ -56,3 +56,7 @@ export const copyToClipboard = str => {
   document.execCommand("copy");
   document.body.removeChild(el);
 };
+
+export const changeBackground = str => {
+  document.body.style.backgroundColor = `#${str}`;
+};
