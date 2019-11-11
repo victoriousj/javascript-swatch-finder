@@ -1,3 +1,17 @@
+export const compareColors = colorArr => {
+  for (let i = 0; i < colorArr.length; i++) {
+    let color = colorArr[i];
+    for (let j = i + 1; j < colorArr.length; j++) {
+      let color2 = colorArr[j];
+      if (colorDelta(color.hex, color2.hex) > 0.9) {
+        colorArr.splice(j--, 1);
+      }
+    }
+  }
+
+  return colorArr;
+};
+
 export const colorDelta = (hex1, hex2) => {
   // get red/green/blue int values of hex1
   var r1 = parseInt(hex1.substring(0, 2), 16);
@@ -17,4 +31,19 @@ export const colorDelta = (hex1, hex2) => {
   b /= 255;
   // 0 means opposit colors, 1 means same colors
   return (r + g + b) / 3;
+};
+
+const rgbToHex = function(rgb) {
+  var hex = Number(rgb).toString(16);
+  if (hex.length < 2) {
+    hex = "0" + hex;
+  }
+  return hex;
+};
+
+export const fullColorHex = function(r, g, b) {
+  var red = rgbToHex(r);
+  var green = rgbToHex(g);
+  var blue = rgbToHex(b);
+  return red + green + blue;
 };

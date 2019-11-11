@@ -3,6 +3,8 @@ import "./App.css";
 
 import Color from "./Color";
 
+import { fullColorHex, compareColors } from "./helpers";
+
 const App = () => {
   const [uImage, setUImage] = React.useState("");
   const [colors, setColors] = React.useState([]);
@@ -16,6 +18,7 @@ const App = () => {
   const onChange = e => {
     if (!e.target.files.length) return;
 
+    setColors([]);
     var imgSrc = URL.createObjectURL(e.target.files[0]);
     setUImage(imgSrc);
     var canvas = canvasRef.current;
@@ -58,38 +61,64 @@ const App = () => {
           var color = {
             r: c[0],
             g: c[1],
-            b: c[2]
+            b: c[2],
+            hex: fullColorHex(c[0], c[1], c[2])
           };
 
           colorArr.push(color);
         }
       }
 
+      compareColors(colorArr);
+
       setColors(
         colorArr.map(x => (
-          <Color key={`${x.r}${x.g}${x.b}`} r={x.r} g={x.g} b={x.b} />
+          <Color
+            key={`${x.r}${x.g}${x.b}`}
+            r={x.r}
+            g={x.g}
+            b={x.b}
+            hex={x.hex}
+          />
         ))
       );
     }
     draw();
   };
 
+  const image =
+    uImage === "" ? (
+      <span>click to select an image</span>
+    ) : (
+      <img className="image-file" src={uImage} alt="click to select a file" />
+    );
+
   return (
-    <div className="container">
-      <div className="photo-container">
-        <div
-          className={`photo ${uImage === "" ? "border" : ""}`}
-          onClick={handleFormClick}
-        >
-          {`${uImage === "" ? "click to select an image" : ""}`}
-          <img className="image-file" src={uImage} alt="" />
+    <div>
+      <header>
+        <h1>Swatch Finder</h1>
+        <code>by victor d. johnson</code>
+      </header>
+      <div className="container">
+        <div className="photo-container">
+          <div
+            className={`photo ${uImage === "" ? "border" : ""}`}
+            onClick={handleFormClick}
+          >
+            {image}
+          </div>
         </div>
+        <div className="results">
+          <div className="color-swatch">{colors}</div>
+        </div>
+        <canvas ref={canvasRef}></canvas>
+        <input
+          ref={inputRef}
+          type="file"
+          name="file-input"
+          onChange={onChange}
+        />
       </div>
-      <div className="results">
-        <div className="color-swatch">{colors}</div>
-      </div>
-      <canvas ref={canvasRef}></canvas>
-      <input ref={inputRef} type="file" name="file-input" onChange={onChange} />
     </div>
   );
 };

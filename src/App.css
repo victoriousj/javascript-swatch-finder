@@ -17,7 +17,7 @@ body {
   display: flex;
   height: 80vh;
   display: flex;
-  margin: 5% auto;
+  margin: 2% auto;
   padding: 10px;
   width: 80vw;
 }
@@ -75,6 +75,8 @@ canvas {
 .color-block {
   align-items: center;
   border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   display: flex;
   font-weight: 600;
   height: 100px;
@@ -83,14 +85,24 @@ canvas {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
   width: 100px;
+  margin: 5px;
 }
 
 .color-swatch {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 input[type="file"] {
   display: none;
+}
+
+h1 {
+  margin: 1% auto 0%;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
 }
