@@ -96,8 +96,7 @@ const App = () => {
   return (
     <div>
       <header>
-        <h1>Swatch Finder</h1>
-        <code>by victor d. johnson</code>
+        <h1>Swatch Finder</h1> <span>by victor d. johnson</span>
       </header>
       <div className="container">
         <div className="photo-container">

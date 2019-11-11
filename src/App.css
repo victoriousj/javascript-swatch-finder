@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 body {
+  font-family: "Open Sans", sans-serif;
   background-color: #121314;
   color: white;
   height: 100vh;
@@ -15,11 +16,11 @@ body {
   border: 2px solid white;
   border-radius: 5px;
   display: flex;
-  height: 80vh;
+  height: 88vh;
   display: flex;
-  margin: 2% auto;
+  margin: 1% auto;
   padding: 10px;
-  width: 80vw;
+  width: 99vw;
 }
 .photo-container {
   background-color: #333;
@@ -43,6 +44,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 img {
   height: auto;
@@ -105,8 +107,8 @@ input[type="file"] {
 }
 
 h1 {
-  margin: 1% auto 0%;
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 3rem;
+  padding: 20px 0 0;
+  margin: 0;
+  font-weight: lighter;
+  font-size: 2rem;
 }
