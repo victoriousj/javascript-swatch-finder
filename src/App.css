@@ -1,56 +1,96 @@
-body {
-  width: 100%;
-  height: 100%;
+* {
   box-sizing: border-box;
+}
+body {
   background-color: #121314;
   color: white;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  width: 100vw;
+}
+.container {
+  align-content: space-around;
+  background-color: #1a1b1c;
+  border: 2px solid white;
+  border-radius: 5px;
+  display: flex;
+  height: 80vh;
+  display: flex;
+  margin: 5% auto;
+  padding: 10px;
+  width: 80vw;
+}
+.photo-container {
+  background-color: #333;
+  height: 100%;
+  width: 50%;
 }
 
-.container {
-  width: 80%;
-  height: 80%;
-  border: 2px dashed gray;
-  border-radius: 5px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1%;
+.photo-container:hover {
+  background-color: #2a2a2a;
+}
+
+.photo-container:hover img {
+  border: 2px dashed white;
 }
 
 .results {
-  height: 500px;
+  background-color: #444;
+  height: 100%;
+  padding: 50px;
+  width: 50%;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 2px dashed #555;
+  padding: 2px;
 }
 
-input,
-button {
-  display: block;
-  margin: 10px auto;
+.photo {
+  cursor: pointer;
+  height: 95%;
+  border-radius: 7px;
+  margin: 1em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
 }
 
+.border {
+  border: 2px dashed #555;
+}
 canvas {
   display: none;
 }
-
-/* canvas:hover {
-  display: none;
-} */
-
-img {
-  max-width: 500px;
-  margin: 0 auto;
+.color-block {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  font-weight: 600;
+  height: 100px;
+  justify-content: center;
+  text-emphasis: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  width: 100px;
 }
 
-.color-block {
-  display: inline-block;
-  flex: 1 0 21%;
-  height: 80px;
-  width: 80px;
-  color: white;
-  margin: auto;
+.color-swatch {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+input[type="file"] {
+  display: none;
 }

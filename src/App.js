@@ -7,6 +7,11 @@ const App = () => {
   const [uImage, setUImage] = React.useState("");
   const [colors, setColors] = React.useState([]);
   const canvasRef = React.createRef();
+  const inputRef = React.createRef();
+
+  const handleFormClick = () => {
+    inputRef.current.click();
+  };
 
   const onChange = e => {
     if (!e.target.files.length) return;
@@ -71,12 +76,20 @@ const App = () => {
 
   return (
     <div className="container">
-      <div className="photo-contianer">
-        <canvas ref={canvasRef}></canvas>
-        <img src={uImage} alt="" />
-        <input type="file" name="file-input" onChange={onChange} />
+      <div className="photo-container">
+        <div
+          className={`photo ${uImage === "" ? "border" : ""}`}
+          onClick={handleFormClick}
+        >
+          {`${uImage === "" ? "click to select an image" : ""}`}
+          <img className="image-file" src={uImage} alt="" />
+        </div>
       </div>
-      <div className="results">{colors}</div>
+      <div className="results">
+        <div className="color-swatch">{colors}</div>
+      </div>
+      <canvas ref={canvasRef}></canvas>
+      <input ref={inputRef} type="file" name="file-input" onChange={onChange} />
     </div>
   );
 };
