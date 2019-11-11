@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/javascript-swatch-finder/static/css/main.1aef4ba2.chunk.css",
+    "main.js": "/javascript-swatch-finder/static/js/main.58875b19.chunk.js",
+    "main.js.map": "/javascript-swatch-finder/static/js/main.58875b19.chunk.js.map",
+    "runtime-main.js": "/javascript-swatch-finder/static/js/runtime-main.721c087d.js",
+    "runtime-main.js.map": "/javascript-swatch-finder/static/js/runtime-main.721c087d.js.map",
+    "static/js/2.d56e569f.chunk.js": "/javascript-swatch-finder/static/js/2.d56e569f.chunk.js",
+    "static/js/2.d56e569f.chunk.js.map": "/javascript-swatch-finder/static/js/2.d56e569f.chunk.js.map",
+    "index.html": "/javascript-swatch-finder/index.html",
+    "precache-manifest.ed36b1115a688267f6615287a65af620.js": "/javascript-swatch-finder/precache-manifest.ed36b1115a688267f6615287a65af620.js",
+    "service-worker.js": "/javascript-swatch-finder/service-worker.js",
+    "static/css/main.1aef4ba2.chunk.css.map": "/javascript-swatch-finder/static/css/main.1aef4ba2.chunk.css.map",
+    "static/media/swatch-finder.svg": "/javascript-swatch-finder/static/media/swatch-finder.3a683617.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.721c087d.js",
+    "static/js/2.d56e569f.chunk.js",
+    "static/css/main.1aef4ba2.chunk.css",
+    "static/js/main.58875b19.chunk.js"
+  ]
+}
