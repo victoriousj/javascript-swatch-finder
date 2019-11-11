@@ -3,7 +3,7 @@ export const weighColors = colorArr => {
     let color = colorArr[i];
     for (let j = i + 1; j < colorArr.length; j++) {
       let color2 = colorArr[j];
-      if (colorDelta(color.hex, color2.hex) > 0.9) {
+      if (colorDelta(color.hex, color2.hex) > 0.93) {
         color.weight += color2.weight;
         colorArr.splice(j--, 1);
       }

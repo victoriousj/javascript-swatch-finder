@@ -32,7 +32,7 @@ const App = () => {
       // The unit used to determine the dimensions
       // of the pixel grid we will create.
       // Higher value means more colors will be found.
-      const size = 8;
+      const size = 10;
 
       const height = (canvas.height = img.height);
       const width = (canvas.width = img.width);
