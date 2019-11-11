@@ -3,7 +3,10 @@ import React from "react";
 import { copyToClipboard, changeBackground } from "./helpers";
 
 const Color = ({ hex, weight }) => {
-  const emphasis = `${80 * `1.${weight}`}px`;
+  const isMobile = window.innerWidth < 800 ? true : false;
+  const emphasis = isMobile
+    ? `${50 * `1.${weight}`}px`
+    : `${80 * `1.${weight}`}px`;
   const [content, setContent] = React.useState(hex);
 
   const colorStyle = {

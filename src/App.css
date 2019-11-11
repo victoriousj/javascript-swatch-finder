@@ -132,11 +132,11 @@ canvas {
   border: 3px solid white;
   display: flex;
   font-weight: 600;
-  height: 100px;
+  height: 80px;
   justify-content: center;
   text-emphasis: bold;
   color: rgba(255, 255, 255, 0.6);
-  width: 100px;
+  width: 80px;
   font-size: 1.25rem;
   margin: 5px;
   cursor: pointer;
@@ -152,4 +152,54 @@ canvas {
   justify-content: center;
   align-content: center;
   align-items: center;
+}
+
+@media (max-width: 800px) {
+  header {
+    justify-content: space-between;
+  }
+  .container {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    margin: 1% auto;
+    padding: 10px;
+    width: 97vw;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .photo-container {
+    height: 40%;
+    width: 100%;
+  }
+
+  .photo {
+    margin: 0.5em;
+  }
+
+  .results {
+    background-color: #444;
+    height: 60%;
+    padding: 20px;
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .color-block {
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    justify-content: center;
+    text-emphasis: bold;
+    color: white;
+    width: 80px;
+    font-size: 0.7rem;
+    margin: 5px;
+  }
 }
