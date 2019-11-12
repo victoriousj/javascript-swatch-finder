@@ -4,7 +4,7 @@ This will look at an image file that has been uploaded to it and return to you a
 
 ---
 
-![Easy palette produced by five bold colors](./example.png?raw=true)
+![Easy palette produced by five bold colors](https://raw.githubusercontent.com/victoriousj/javascript-swatch-finder/master/src/example.PNG)
 
 ---
 
@@ -24,7 +24,7 @@ I wanted to be able to take photos on my phone and quickly see what the hex valu
 
 Starting with inputing your file, the program will compress the photo down so that it is less than one-hundredth it normal size. When it gets this small, it will lose a lot of details that you would want in a photo you would be viewing, but when we blow this photo back up to its regular size, without allowing the browser to smooth out the harsh pixel edges, we get a rough representation of what the image originally looked like.
 
-![Two of the same images, one is the original and the other is a rough pixel version of the same photo](./pixelate.png?raw=true)
+![Two of the same images, one is the original and the other is a rough pixel version of the same photo](https://raw.githubusercontent.com/victoriousj/javascript-swatch-finder/master/src/pixelate.png)
 
 When we do this, we now have clear borders between colors instead of millions of slightly different pixels. We will then iterate over each of these color blocks, create an object with Red, Green, and Blue properties on it that correspond to the color of the block and then add this object to an array. Once we have gone over each block, we will go over this array and determine if there are any similiar colors which we can group together.
 
