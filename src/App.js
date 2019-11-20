@@ -33,11 +33,13 @@ const App = () => {
       // of the pixel grid we will create.
       // Higher value means more colors will be found.
       const size = 10;
-
       const height = (canvas.height = img.height);
       const width = (canvas.width = img.width);
-      const h = (height * size) / height;
-      const w = (width * size) / width;
+      const heightOrWidth = height > width ? height : width;
+
+      const h = (height * size) / (height === heightOrWidth ? height : width);
+      const w = (width * size) / (width === heightOrWidth ? width : height);
+
       const colorArr = [];
 
       // Draw the image scaled down to a pixel grid the
@@ -53,11 +55,11 @@ const App = () => {
       ctx.drawImage(canvas, 0, 0, w, h, 0, 0, width, height);
 
       // Get the color of the center of each square in our grid.
-      for (let i = 0; i < size; i++) {
-        for (let j = 0; j < size; j++) {
+      for (let i = 0; i < w; i++) {
+        for (let j = 0; j < h; j++) {
           var c = ctx.getImageData(
-            (width / size) * i + width / (size * 2),
-            (height / size) * j + height / (size * 2),
+            (width / w) * i + width / (w * 2),
+            (height / h) * j + height / (h * 2),
             1,
             1
           ).data;
@@ -106,12 +108,12 @@ const App = () => {
             onClick={handleFormClick}
           >
             {imageEl}
+            <canvas ref={canvasRef}></canvas>
           </div>
         </div>
         <div className="results">
           <div className="color-swatch">{colors}</div>
         </div>
-        <canvas ref={canvasRef}></canvas>
         <input ref={inputRef} type="file" onChange={onChange} />
       </div>
     </div>
