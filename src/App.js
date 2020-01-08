@@ -37,8 +37,8 @@ const App = () => {
       const width = (canvas.width = img.width);
       const heightOrWidth = height > width ? height : width;
 
-      const h = (height * size) / (height === heightOrWidth ? height : width);
-      const w = (width * size) / (width === heightOrWidth ? width : height);
+      const h = (height * size) / heightOrWidth ;
+      const w = (width * size) / heightOrWidth;
 
       const colorArr = [];
 
