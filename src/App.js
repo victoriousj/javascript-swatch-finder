@@ -79,6 +79,7 @@ const App = () => {
       setColors(colorArr.slice(0, 15).map(x => <Color {...x} key={x.hex} />));
     }
     draw();
+    inputRef.current.value = "";
   };
 
   const resetImg = () => {
