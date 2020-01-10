@@ -78,8 +78,12 @@ header {
   background-color: #2a2a2a;
 }
 
-.photo-container:hover img {
+.photo-container:hover .image-file {
   border: 2px dashed white;
+}
+
+.image-text {
+  margin-top: 10px;
 }
 
 .image-file {
@@ -126,6 +130,11 @@ canvas {
   display: none;
 }
 
+span.bold {
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
 .color-block {
   align-items: center;
   border-radius: 50%;
@@ -133,7 +142,6 @@ canvas {
   display: flex;
   font-weight: 600;
   justify-content: center;
-  text-emphasis: bold;
   color: rgba(255, 255, 255, 1);
   text-shadow: 1px 1px 2px black;
   font-size: 1.25rem;

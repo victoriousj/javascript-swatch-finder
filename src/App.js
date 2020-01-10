@@ -3,20 +3,22 @@ import Color from "./Color";
 import Header from "./Header";
 
 import "./App.css";
+import upload from "./upload.svg";
 
-import { toHex, weighColors } from "./helpers";
+import { toHex, weighColors, changeBackground } from "./helpers";
 
 const App = () => {
   const handleFormClick = () => inputRef.current.click();
   const [colors, setColors] = React.useState([]);
   const [image, setImage] = React.useState("");
+  const photoContainer = React.createRef();
   const canvasRef = React.createRef();
   const inputRef = React.createRef();
 
-  const onChange = e => {
-    if (!e.target.files.length) return;
+  const processImg = file => {
+    if (!file) return;
 
-    const imgSrc = URL.createObjectURL(e.target.files[0]);
+    const imgSrc = URL.createObjectURL(file);
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     const img = new Image();
@@ -40,7 +42,7 @@ const App = () => {
       ctx.mozImageSmoothingEnabled = false;
       ctx.drawImage(canvas, 0, 0, w, h, 0, 0, width, height);
 
-      const colorArr = [];
+      let colorArr = [];
       for (let i = 0; i < w; i++) {
         for (let j = 0; j < h; j++) {
           let c = ctx.getImageData(
@@ -57,21 +59,46 @@ const App = () => {
           colorArr.push(color);
         }
       }
+
       weighColors(colorArr);
-      setColors(
-        colorArr
-          .slice(0, 15)
-          .sort((x, y) => x.weight - y.weight)
-          .map(x => <Color {...x} />)
-      );
+      colorArr = colorArr.sort((x, y) => x.weight - y.weight);
+      changeBackground(colorArr[colorArr.length - 1].hex);
+      setColors(colorArr.slice(0, 15).map(x => <Color {...x} key={x.hex} />));
     }
     draw();
     inputRef.current.value = "";
   };
 
+  const onChange = e => {
+    if (!e.target.files.length) return;
+    processImg(e.target.files[0]);
+  };
+
+  const onDrop = e => {
+    e.preventDefault();
+    if (!e.dataTransfer) return;
+    processImg(e.dataTransfer.files[0]);
+    photoContainer.current.style.backgroundColor = "rgba(51,51,51,1)";
+  };
+
+  const highlight = e => {
+    e.preventDefault();
+    photoContainer.current.style.backgroundColor = "rgba(255,255,255,.3)";
+  };
+
+  const onDragLeave = e => {
+    e.preventDefault();
+    photoContainer.current.style.backgroundColor = "rgba(51,51,51,1)";
+  };
+
   const imageEl =
     image === "" ? (
-      <span>select an image</span>
+      <div>
+        <img src={upload} alt="" />
+        <div className="image-text">
+          <span className="bold">Choose a file</span>&nbsp; or drag it here
+        </div>
+      </div>
     ) : (
       <img className="image-file" src={image} alt="select file" />
     );
@@ -80,7 +107,13 @@ const App = () => {
     <div>
       <Header />
       <div className="container">
-        <div className="photo-container">
+        <div
+          ref={photoContainer}
+          className="photo-container"
+          onDragOver={highlight}
+          onDragLeave={onDragLeave}
+          onDrop={onDrop}
+        >
           <div
             className={`photo ${image === "" ? "border" : ""}`}
             onClick={handleFormClick}
@@ -92,7 +125,12 @@ const App = () => {
         <div className="results">
           <div className="color-swatch">{colors}</div>
         </div>
-        <input ref={inputRef} type="file" onChange={onChange} />
+        <input
+          ref={inputRef}
+          accept="image/*"
+          type="file"
+          onChange={onChange}
+        />
       </div>
     </div>
   );
