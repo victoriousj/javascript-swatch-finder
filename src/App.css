@@ -132,12 +132,10 @@ canvas {
   border: 3px solid white;
   display: flex;
   font-weight: 600;
-  height: 80px;
   justify-content: center;
   text-emphasis: bold;
   color: rgba(255, 255, 255, 1);
   text-shadow: 1px 1px 2px black;
-  width: 80px;
   font-size: 1.25rem;
   margin: 5px;
   cursor: pointer;

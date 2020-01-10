@@ -4,7 +4,7 @@ import Header from "./Header";
 
 import "./App.css";
 
-import { fullColorHex, weighColors } from "./helpers";
+import { toHex, weighColors } from "./helpers";
 
 const App = () => {
   const handleFormClick = () => inputRef.current.click();
@@ -24,40 +24,26 @@ const App = () => {
 
     function draw() {
       img.onload = () => pixelate();
-      img.crossOrigin = "anonymous";
       img.src = imgSrc;
     }
 
     function pixelate() {
-      // The unit used to determine the dimensions
-      // of the pixel grid we will create.
-      // Higher value means more colors will be found.
       const size = 10;
       const height = (canvas.height = img.height);
       const width = (canvas.width = img.width);
       const heightOrWidth = height > width ? height : width;
-
-      const h = (height * size) / heightOrWidth ;
+      const h = (height * size) / heightOrWidth;
       const w = (width * size) / heightOrWidth;
 
-      const colorArr = [];
-
-      // Draw the image scaled down to a pixel grid the
-      // size of the 'size' variable (e.g., 8 x 8)
       ctx.drawImage(img, 0, 0, w, h);
-      // Turn off smoothing so, when upscaled, the image
-      // will have hard edges
       ctx.imageSmoothingEnabled = false;
       ctx.mozImageSmoothingEnabled = false;
-      // Now scale up that small image and the details of
-      // most pixels will have been lost, leaving a grid
-      // of the most prominent colors in each section.
       ctx.drawImage(canvas, 0, 0, w, h, 0, 0, width, height);
 
-      // Get the color of the center of each square in our grid.
+      const colorArr = [];
       for (let i = 0; i < w; i++) {
         for (let j = 0; j < h; j++) {
-          var c = ctx.getImageData(
+          let c = ctx.getImageData(
             (width / w) * i + width / (w * 2),
             (height / h) * j + height / (h * 2),
             1,
@@ -65,38 +51,29 @@ const App = () => {
           ).data;
 
           let color = {
-            r: c[0],
-            g: c[1],
-            b: c[2],
             weight: 1,
-            hex: fullColorHex(c[0], c[1], c[2])
+            hex: toHex(c[0], c[1], c[2])
           };
-
           colorArr.push(color);
         }
       }
       weighColors(colorArr);
-      setColors(colorArr.slice(0, 15).map(x => <Color {...x} key={x.hex} />));
+      setColors(
+        colorArr
+          .slice(0, 15)
+          .sort((x, y) => x.weight - y.weight)
+          .map(x => <Color {...x} />)
+      );
     }
     draw();
     inputRef.current.value = "";
-  };
-
-  const resetImg = () => {
-    setImage("");
-    setColors([]);
   };
 
   const imageEl =
     image === "" ? (
       <span>select an image</span>
     ) : (
-      <img
-        className="image-file"
-        src={image}
-        alt="select file"
-        onClick={resetImg}
-      />
+      <img className="image-file" src={image} alt="select file" />
     );
 
   return (

@@ -32,20 +32,9 @@ export const colorDelta = (hex1, hex2) => {
   return (r + g + b) / 3;
 };
 
-const rgbToHex = function(rgb) {
-  var hex = Number(rgb).toString(16);
-  if (hex.length < 2) {
-    hex = "0" + hex;
-  }
-  return hex;
-};
+const rgbToHex = rgb => rgb.toString(16).padStart(2, "0");
 
-export const fullColorHex = function(r, g, b) {
-  var red = rgbToHex(r);
-  var green = rgbToHex(g);
-  var blue = rgbToHex(b);
-  return red + green + blue;
-};
+export const toHex = (r, g, b) => rgbToHex(r) + rgbToHex(g) + rgbToHex(b);
 
 export const copyToClipboard = str => {
   const el = document.createElement("textarea");
