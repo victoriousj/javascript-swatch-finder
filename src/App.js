@@ -8,6 +8,7 @@ import upload from "./upload.svg";
 import { toHex, weighColors, changeBackground } from "./helpers";
 
 const App = () => {
+  const isMobile = !!(window.innerWidth <= 800);
   const handleFormClick = () => inputRef.current.click();
   const [colors, setColors] = React.useState([]);
   const [image, setImage] = React.useState("");
@@ -96,7 +97,8 @@ const App = () => {
       <div>
         <img src={upload} alt="" />
         <div className="image-text">
-          <span className="bold">Choose a file</span>&nbsp; or drag it here
+          <span className="bold">Choose a file</span> &nbsp;
+          {!isMobile && "or drag it here"}
         </div>
       </div>
     ) : (
