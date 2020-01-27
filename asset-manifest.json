@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.67dbe3ee.chunk.css",
-    "main.js": "/static/js/main.d837ecec.chunk.js",
-    "main.js.map": "/static/js/main.d837ecec.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f57348a1.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f57348a1.js.map",
-    "static/js/2.c41b2126.chunk.js": "/static/js/2.c41b2126.chunk.js",
-    "static/js/2.c41b2126.chunk.js.map": "/static/js/2.c41b2126.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.06f96abaa549d6cd656d6667b03f9954.js": "/precache-manifest.06f96abaa549d6cd656d6667b03f9954.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.67dbe3ee.chunk.css.map": "/static/css/main.67dbe3ee.chunk.css.map",
-    "static/js/2.c41b2126.chunk.js.LICENSE": "/static/js/2.c41b2126.chunk.js.LICENSE",
-    "static/media/swatch-finder.svg": "/static/media/swatch-finder.3a683617.svg",
-    "static/media/upload.svg": "/static/media/upload.51b27727.svg"
+    "main.css": "/javascript-swatch-finder/static/css/main.67dbe3ee.chunk.css",
+    "main.js": "/javascript-swatch-finder/static/js/main.7f60e83c.chunk.js",
+    "main.js.map": "/javascript-swatch-finder/static/js/main.7f60e83c.chunk.js.map",
+    "runtime-main.js": "/javascript-swatch-finder/static/js/runtime-main.2c9a1bea.js",
+    "runtime-main.js.map": "/javascript-swatch-finder/static/js/runtime-main.2c9a1bea.js.map",
+    "static/js/2.c41b2126.chunk.js": "/javascript-swatch-finder/static/js/2.c41b2126.chunk.js",
+    "static/js/2.c41b2126.chunk.js.map": "/javascript-swatch-finder/static/js/2.c41b2126.chunk.js.map",
+    "index.html": "/javascript-swatch-finder/index.html",
+    "precache-manifest.8c67234e6e44c47576612ed32bbf824e.js": "/javascript-swatch-finder/precache-manifest.8c67234e6e44c47576612ed32bbf824e.js",
+    "service-worker.js": "/javascript-swatch-finder/service-worker.js",
+    "static/css/main.67dbe3ee.chunk.css.map": "/javascript-swatch-finder/static/css/main.67dbe3ee.chunk.css.map",
+    "static/js/2.c41b2126.chunk.js.LICENSE": "/javascript-swatch-finder/static/js/2.c41b2126.chunk.js.LICENSE",
+    "static/media/swatch-finder.svg": "/javascript-swatch-finder/static/media/swatch-finder.3a683617.svg",
+    "static/media/upload.svg": "/javascript-swatch-finder/static/media/upload.51b27727.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f57348a1.js",
+    "static/js/runtime-main.2c9a1bea.js",
     "static/js/2.c41b2126.chunk.js",
     "static/css/main.67dbe3ee.chunk.css",
-    "static/js/main.d837ecec.chunk.js"
+    "static/js/main.7f60e83c.chunk.js"
   ]
 }
