@@ -1,4 +1,4 @@
-export const weighColors = colorArr => {
+export const weighColors = (colorArr) => {
   for (let i = 0; i < colorArr.length; i++) {
     let color = colorArr[i];
     for (let j = i + 1; j < colorArr.length; j++) {
@@ -32,11 +32,11 @@ export const colorDelta = (hex1, hex2) => {
   return (r + g + b) / 3;
 };
 
-const rgbToHex = rgb => rgb.toString(16).padStart(2, "0");
+const rgbToHex = (rgb) => rgb.toString(16).padStart(2, "0");
 
 export const toHex = (r, g, b) => rgbToHex(r) + rgbToHex(g) + rgbToHex(b);
 
-export const copyToClipboard = str => {
+export const copyToClipboard = (str) => {
   const el = document.createElement("textarea");
   el.value = `#${str}`;
   document.body.appendChild(el);
@@ -45,6 +45,6 @@ export const copyToClipboard = str => {
   document.body.removeChild(el);
 };
 
-export const changeBackground = str => {
+export const changeBackground = (str) => {
   document.body.style.backgroundColor = `#${str}`;
 };

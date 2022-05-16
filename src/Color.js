@@ -11,7 +11,7 @@ const Color = ({ hex, weight }) => {
   const colorStyle = {
     backgroundColor: `#${hex}`,
     height: emphasis,
-    width: emphasis
+    width: emphasis,
   };
 
   const clickColor = () => {
