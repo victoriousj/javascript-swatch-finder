@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "55ff932a25197ae8cb937251df647143",
+    "revision": "f890ac598afbf746836d7dac750f7166",
     "url": "/javascript-swatch-finder/index.html"
   },
   {
-    "revision": "4b77acda46c5f34aa526",
+    "revision": "fab67c7f6b121bd924fb",
     "url": "/javascript-swatch-finder/static/css/main.d00c32bb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/javascript-swatch-finder/static/js/2.24236dbe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4b77acda46c5f34aa526",
-    "url": "/javascript-swatch-finder/static/js/main.7cbf0a02.chunk.js"
+    "revision": "fab67c7f6b121bd924fb",
+    "url": "/javascript-swatch-finder/static/js/main.4dfaa1e7.chunk.js"
   },
   {
     "revision": "5d61a5fcd38143877e2e",
@@ -28,11 +28,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/javascript-swatch-finder/static/media/download.e198a70e.svg"
   },
   {
-    "revision": "0856352c91afc32b6d5e68f558f2804a",
-    "url": "/javascript-swatch-finder/static/media/swatch-finder.0856352c.svg"
+    "revision": "a3df0ad2327f364ade27dd95da071436",
+    "url": "/javascript-swatch-finder/static/media/swatch-finder.a3df0ad2.svg"
   },
   {
-    "revision": "f4ef2c0abde7963df6b94c4be0667cee",
-    "url": "/javascript-swatch-finder/static/media/upload.f4ef2c0a.svg"
+    "revision": "9d485b87a978cf199e626676946defab",
+    "url": "/javascript-swatch-finder/static/media/upload.9d485b87.svg"
   }
 ]);
