@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/javascript-swatch-finder/static/css/main.d00c32bb.chunk.css",
-    "main.js": "/javascript-swatch-finder/static/js/main.4dfaa1e7.chunk.js",
-    "main.js.map": "/javascript-swatch-finder/static/js/main.4dfaa1e7.chunk.js.map",
+    "main.js": "/javascript-swatch-finder/static/js/main.e68431cd.chunk.js",
+    "main.js.map": "/javascript-swatch-finder/static/js/main.e68431cd.chunk.js.map",
     "runtime-main.js": "/javascript-swatch-finder/static/js/runtime-main.130606fa.js",
     "runtime-main.js.map": "/javascript-swatch-finder/static/js/runtime-main.130606fa.js.map",
     "static/js/2.24236dbe.chunk.js": "/javascript-swatch-finder/static/js/2.24236dbe.chunk.js",
     "static/js/2.24236dbe.chunk.js.map": "/javascript-swatch-finder/static/js/2.24236dbe.chunk.js.map",
     "index.html": "/javascript-swatch-finder/index.html",
-    "precache-manifest.55058640fc6b0fa2fb8e83b3e25fce9b.js": "/javascript-swatch-finder/precache-manifest.55058640fc6b0fa2fb8e83b3e25fce9b.js",
+    "precache-manifest.10ed6db3fc8b627a5e0c6c4613c79781.js": "/javascript-swatch-finder/precache-manifest.10ed6db3fc8b627a5e0c6c4613c79781.js",
     "service-worker.js": "/javascript-swatch-finder/service-worker.js",
     "static/css/main.d00c32bb.chunk.css.map": "/javascript-swatch-finder/static/css/main.d00c32bb.chunk.css.map",
     "static/js/2.24236dbe.chunk.js.LICENSE.txt": "/javascript-swatch-finder/static/js/2.24236dbe.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.130606fa.js",
     "static/js/2.24236dbe.chunk.js",
     "static/css/main.d00c32bb.chunk.css",
-    "static/js/main.4dfaa1e7.chunk.js"
+    "static/js/main.e68431cd.chunk.js"
   ]
 }
