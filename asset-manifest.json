@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/javascript-swatch-finder/static/css/main.41221b60.chunk.css",
-    "main.js": "/javascript-swatch-finder/static/js/main.79766260.chunk.js",
-    "main.js.map": "/javascript-swatch-finder/static/js/main.79766260.chunk.js.map",
+    "main.css": "/javascript-swatch-finder/static/css/main.d00c32bb.chunk.css",
+    "main.js": "/javascript-swatch-finder/static/js/main.7cbf0a02.chunk.js",
+    "main.js.map": "/javascript-swatch-finder/static/js/main.7cbf0a02.chunk.js.map",
     "runtime-main.js": "/javascript-swatch-finder/static/js/runtime-main.130606fa.js",
     "runtime-main.js.map": "/javascript-swatch-finder/static/js/runtime-main.130606fa.js.map",
-    "static/js/2.e67060fa.chunk.js": "/javascript-swatch-finder/static/js/2.e67060fa.chunk.js",
-    "static/js/2.e67060fa.chunk.js.map": "/javascript-swatch-finder/static/js/2.e67060fa.chunk.js.map",
+    "static/js/2.24236dbe.chunk.js": "/javascript-swatch-finder/static/js/2.24236dbe.chunk.js",
+    "static/js/2.24236dbe.chunk.js.map": "/javascript-swatch-finder/static/js/2.24236dbe.chunk.js.map",
     "index.html": "/javascript-swatch-finder/index.html",
-    "precache-manifest.55260aeae9b34a3e0ce3dc63ffe2d2e3.js": "/javascript-swatch-finder/precache-manifest.55260aeae9b34a3e0ce3dc63ffe2d2e3.js",
+    "precache-manifest.bc01382a19f8d1a48ba0038ee026a17f.js": "/javascript-swatch-finder/precache-manifest.bc01382a19f8d1a48ba0038ee026a17f.js",
     "service-worker.js": "/javascript-swatch-finder/service-worker.js",
-    "static/css/main.41221b60.chunk.css.map": "/javascript-swatch-finder/static/css/main.41221b60.chunk.css.map",
-    "static/js/2.e67060fa.chunk.js.LICENSE.txt": "/javascript-swatch-finder/static/js/2.e67060fa.chunk.js.LICENSE.txt",
+    "static/css/main.d00c32bb.chunk.css.map": "/javascript-swatch-finder/static/css/main.d00c32bb.chunk.css.map",
+    "static/js/2.24236dbe.chunk.js.LICENSE.txt": "/javascript-swatch-finder/static/js/2.24236dbe.chunk.js.LICENSE.txt",
+    "static/media/download.svg": "/javascript-swatch-finder/static/media/download.e198a70e.svg",
     "static/media/swatch-finder.svg": "/javascript-swatch-finder/static/media/swatch-finder.0856352c.svg",
     "static/media/upload.svg": "/javascript-swatch-finder/static/media/upload.f4ef2c0a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.130606fa.js",
-    "static/js/2.e67060fa.chunk.js",
-    "static/css/main.41221b60.chunk.css",
-    "static/js/main.79766260.chunk.js"
+    "static/js/2.24236dbe.chunk.js",
+    "static/css/main.d00c32bb.chunk.css",
+    "static/js/main.7cbf0a02.chunk.js"
   ]
 }
