@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/javascript-swatch-finder/static/css/main.419dd575.css",
+    "main.css": "/javascript-swatch-finder/static/css/main.9f522721.css",
     "main.js": "/javascript-swatch-finder/static/js/main.920f660b.js",
     "static/media/upload.svg": "/javascript-swatch-finder/static/media/upload.fe151070f141b699231e38dc1509c3a1.svg",
     "static/media/download.svg": "/javascript-swatch-finder/static/media/download.ab0e985c97c5f1e4baab3fb4b95f986f.svg",
     "static/media/swatch-finder.svg": "/javascript-swatch-finder/static/media/swatch-finder.599050f43d9d83650636a5a3dffc6d85.svg",
     "index.html": "/javascript-swatch-finder/index.html",
-    "main.419dd575.css.map": "/javascript-swatch-finder/static/css/main.419dd575.css.map",
+    "main.9f522721.css.map": "/javascript-swatch-finder/static/css/main.9f522721.css.map",
     "main.920f660b.js.map": "/javascript-swatch-finder/static/js/main.920f660b.js.map"
   },
   "entrypoints": [
-    "static/css/main.419dd575.css",
+    "static/css/main.9f522721.css",
     "static/js/main.920f660b.js"
   ]
 }
