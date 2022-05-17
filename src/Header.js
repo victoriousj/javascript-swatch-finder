@@ -19,34 +19,23 @@ const Header = (props) => {
                 </a>
             </div>
             {props.hasImage && (
-                <div
-                    hidden={props.hasImage}
-                    style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        flexDirection: "row",
-                    }}
-                >
+                <div className="settings">
+                    <input
+                        onChange={props.changeSize}
+                        type="range"
+                        id="size"
+                        name="size"
+                        min="1"
+                        max="30"
+                        value={props.size}
+                    />
+                    <span hidden={props.isMobile}> {props.size}</span>
                     <div>
-                        <input
-                            onChange={props.changeSize}
-                            type="range"
-                            id="size"
-                            name="size"
-                            min="1"
-                            max="20"
-                            value={props.size}
-                        />
-                        <label htmlFor="volume">Pixel Size </label>
-                        <span>{props.size}</span>
-                    </div>
-                    <div style={{ marginLeft: "20px" }}>
                         <button
                             className="download-button"
                             onClick={props.downloadImage}
                         >
-                            download
+                            <span hidden={props.isMobile}>download</span>
                             <img src={download} alt={"download"} />
                         </button>
                     </div>

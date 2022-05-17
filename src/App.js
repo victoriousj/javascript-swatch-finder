@@ -138,6 +138,7 @@ const App = () => {
                 changeSize={changeSize}
                 downloadImage={downloadImage}
                 hasImage={fileName !== ""}
+                isMobile={isMobile}
             />
             <div className="container">
                 <div
