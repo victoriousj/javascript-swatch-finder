@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/javascript-swatch-finder/static/css/main.d79607f4.css",
-    "main.js": "/javascript-swatch-finder/static/js/main.ad48a977.js",
+    "main.css": "/javascript-swatch-finder/static/css/main.419dd575.css",
+    "main.js": "/javascript-swatch-finder/static/js/main.920f660b.js",
     "static/media/upload.svg": "/javascript-swatch-finder/static/media/upload.fe151070f141b699231e38dc1509c3a1.svg",
     "index.html": "/javascript-swatch-finder/index.html",
     "static/media/download.svg": "/javascript-swatch-finder/static/media/download.ab0e985c97c5f1e4baab3fb4b95f986f.svg",
     "static/media/swatch-finder.svg": "/javascript-swatch-finder/static/media/swatch-finder.599050f43d9d83650636a5a3dffc6d85.svg",
-    "main.d79607f4.css.map": "/javascript-swatch-finder/static/css/main.d79607f4.css.map",
-    "main.ad48a977.js.map": "/javascript-swatch-finder/static/js/main.ad48a977.js.map"
+    "main.419dd575.css.map": "/javascript-swatch-finder/static/css/main.419dd575.css.map",
+    "main.920f660b.js.map": "/javascript-swatch-finder/static/js/main.920f660b.js.map"
   },
   "entrypoints": [
-    "static/css/main.d79607f4.css",
-    "static/js/main.ad48a977.js"
+    "static/css/main.419dd575.css",
+    "static/js/main.920f660b.js"
   ]
 }
