@@ -13,7 +13,7 @@ const Header = (props) => {
                     target="_blank"
                     className="credit"
                     rel="noopener noreferrer"
-                    href="https://github.com/victoriousj"
+                    href="https://github.com/victoriousj/javascript-swatch-finder"
                 >
                     <p>by victor d. johnson</p>
                 </a>
