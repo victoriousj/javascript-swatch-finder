@@ -255,6 +255,7 @@ span.bold {
         padding: 20px;
         width: 100%;
         overflow: scroll;
+        display: block;
     }
 
     .color-block {
