@@ -1,25 +1,16 @@
 {
   "files": {
-    "main.css": "/javascript-swatch-finder/static/css/main.d00c32bb.chunk.css",
-    "main.js": "/javascript-swatch-finder/static/js/main.e68431cd.chunk.js",
-    "main.js.map": "/javascript-swatch-finder/static/js/main.e68431cd.chunk.js.map",
-    "runtime-main.js": "/javascript-swatch-finder/static/js/runtime-main.130606fa.js",
-    "runtime-main.js.map": "/javascript-swatch-finder/static/js/runtime-main.130606fa.js.map",
-    "static/js/2.24236dbe.chunk.js": "/javascript-swatch-finder/static/js/2.24236dbe.chunk.js",
-    "static/js/2.24236dbe.chunk.js.map": "/javascript-swatch-finder/static/js/2.24236dbe.chunk.js.map",
+    "main.css": "/javascript-swatch-finder/static/css/main.d79607f4.css",
+    "main.js": "/javascript-swatch-finder/static/js/main.ad48a977.js",
+    "static/media/upload.svg": "/javascript-swatch-finder/static/media/upload.fe151070f141b699231e38dc1509c3a1.svg",
     "index.html": "/javascript-swatch-finder/index.html",
-    "precache-manifest.10ed6db3fc8b627a5e0c6c4613c79781.js": "/javascript-swatch-finder/precache-manifest.10ed6db3fc8b627a5e0c6c4613c79781.js",
-    "service-worker.js": "/javascript-swatch-finder/service-worker.js",
-    "static/css/main.d00c32bb.chunk.css.map": "/javascript-swatch-finder/static/css/main.d00c32bb.chunk.css.map",
-    "static/js/2.24236dbe.chunk.js.LICENSE.txt": "/javascript-swatch-finder/static/js/2.24236dbe.chunk.js.LICENSE.txt",
-    "static/media/download.svg": "/javascript-swatch-finder/static/media/download.e198a70e.svg",
-    "static/media/swatch-finder.svg": "/javascript-swatch-finder/static/media/swatch-finder.a3df0ad2.svg",
-    "static/media/upload.svg": "/javascript-swatch-finder/static/media/upload.9d485b87.svg"
+    "static/media/download.svg": "/javascript-swatch-finder/static/media/download.ab0e985c97c5f1e4baab3fb4b95f986f.svg",
+    "static/media/swatch-finder.svg": "/javascript-swatch-finder/static/media/swatch-finder.599050f43d9d83650636a5a3dffc6d85.svg",
+    "main.d79607f4.css.map": "/javascript-swatch-finder/static/css/main.d79607f4.css.map",
+    "main.ad48a977.js.map": "/javascript-swatch-finder/static/js/main.ad48a977.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.130606fa.js",
-    "static/js/2.24236dbe.chunk.js",
-    "static/css/main.d00c32bb.chunk.css",
-    "static/js/main.e68431cd.chunk.js"
+    "static/css/main.d79607f4.css",
+    "static/js/main.ad48a977.js"
   ]
 }
