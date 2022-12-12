@@ -61,7 +61,7 @@ const App = () => {
 
                         let color = {
                             weight: 1,
-                            hex: toHex(c[0], c[1], c[2]),
+                            color: [c[0], c[1], c[2]],
                         };
                         colorArr.push(color);
                     }
@@ -72,6 +72,10 @@ const App = () => {
                 setColors(
                     colorArr
                         .slice(0, 15)
+                        .map((x) => ({
+                            hex: toHex(x.color[0], x.color[1], x.color[2]),
+                            weight: x.weight,
+                        }))
                         .map((x) => <Color {...x} key={x.hex} />)
                 );
             }
