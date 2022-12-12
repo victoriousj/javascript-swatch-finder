@@ -5,7 +5,7 @@ import Header from "./Header";
 import "./App.css";
 import upload from "./upload.svg";
 
-import { toHex, weighColors } from "./helpers";
+import { weighColors } from "./helpers";
 let imgSrc;
 
 const App = () => {
@@ -73,10 +73,10 @@ const App = () => {
                     colorArr
                         .slice(0, 15)
                         .map((x) => ({
-                            hex: toHex(x.color[0], x.color[1], x.color[2]),
+                            color: `rgb(${x.color[0]}, ${x.color[1]}, ${x.color[2]})`,
                             weight: x.weight,
                         }))
-                        .map((x) => <Color {...x} key={x.hex} />)
+                        .map((x) => <Color {...x} key={x.color} />)
                 );
             }
             draw();

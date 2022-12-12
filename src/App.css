@@ -157,7 +157,7 @@ span.bold {
     justify-content: center;
     color: rgba(255, 255, 255, 1);
     text-shadow: 1px 1px 2px black;
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin: 5px;
     cursor: pointer;
 }
@@ -241,7 +241,7 @@ span.bold {
     }
 
     .photo-container {
-        height: 40%;
+        height: 60%;
         width: 100%;
     }
 
@@ -251,7 +251,7 @@ span.bold {
 
     .results {
         background-color: #444;
-        height: 60%;
+        height: 40%;
         padding: 20px;
         width: 100%;
         overflow: scroll;

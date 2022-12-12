@@ -25,13 +25,9 @@ function colorDelta(color1, color2) {
     return (r + g + b) / 3;
 }
 
-const rgbToHex = (rgb) => rgb.toString(16).padStart(2, "0");
-
-export const toHex = (r, g, b) => rgbToHex(r) + rgbToHex(g) + rgbToHex(b);
-
 export const copyToClipboard = (str) => {
     const el = document.createElement("textarea");
-    el.value = `#${str}`;
+    el.value = str;
     document.body.appendChild(el);
     el.select();
     document.execCommand("copy");
@@ -39,5 +35,5 @@ export const copyToClipboard = (str) => {
 };
 
 export const changeBackground = (str) => {
-    document.body.style.backgroundColor = `#${str}`;
+    document.body.style.backgroundColor = str;
 };
